@@ -6,11 +6,11 @@
 		"android": "2.2074"
 	},
 	"id": "raydeeux.xeroxedhalloffame",
-	"name": "XeroxedHallOfFame",
+	"name": "XtraHallOfFame",
 	"version": "v1.0.0",
 	"developer": "RayDeeUx",
-	"description": "\"Xeroxes\" the Hall of Fame button to the Quick Search menu.",
-	"repository": "https://github.com/RayDeeUx/XeroxedHallOfFame",
+	"description": "An \"xtra\" Hall of Fame button in the Quick Search menu.",
+	"repository": "https://github.com/RayDeeUx/XtraHallOfFame",
 	"dependencies": [
 		{
 			"id": "geode.node-ids",
