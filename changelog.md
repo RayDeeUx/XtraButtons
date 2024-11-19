@@ -1,3 +1,3 @@
 # XeroxedHallOfFame Changelog
-## ???
-[There is no changelog, as this mod will not be on the Geode index.]
+## 1.0.0
+- Initial release (to GitHub).
