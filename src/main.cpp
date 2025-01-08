@@ -25,7 +25,6 @@ class $modify(MyLevelSearchLayer, LevelSearchLayer) {
 
 		const auto &hallOfFameTabButton = CCMenuItemSpriteExtra::create(hallOfFameButtonSprite, this, menu_selector(MyLevelSearchLayer::onHallOfFame));
 		hallOfFameTabButton->setID("hall-of-fame-button"_spr);
-		quickSearchMenu->addChild(hallOfFameTabButton);
 
 		RowLayout* layout = RowLayout::create();
 		layout->setGrowCrossAxis(true)->setCrossAxisOverflow(false)->setAxisAlignment(AxisAlignment::Center)->setCrossAxisAlignment(AxisAlignment::Center)->ignoreInvisibleChildren(true);
