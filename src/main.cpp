@@ -30,12 +30,13 @@ class $modify(MyLevelSearchLayer, LevelSearchLayer) {
 		RowLayout* layout = RowLayout::create();
 		layout->setGrowCrossAxis(true)->setCrossAxisOverflow(false)->setAxisAlignment(AxisAlignment::Center)->setCrossAxisAlignment(AxisAlignment::Center)->ignoreInvisibleChildren(true);
 
-		quickSearchMenu->setPosition({quickSearchMenu->getPosition().x, (CCDirector::get()->getWinSize().height / 2.f) + 28});
-		quickSearchMenu->ignoreAnchorPointForPosition(false);
 		quickSearchMenu->setContentSize({365, 116});
+		quickSearchMenu->ignoreAnchorPointForPosition(false);
+		quickSearchMenu->setPosition({quickSearchMenu->getPosition().x, (CCDirector::get()->getWinSize().height / 2.f) + 28});
+		quickSearchMenu->setLayout(layout);
+		quickSearchMenu->addChild(hallOfFameTabButton);
 
-		PageMenu* menuPage = PageMenu::create(static_cast<CCMenu*>(quickSearchMenu), layout, 9);
-		addChild(menuPage);
+		static_cast<PageMenu*>(quickSearchMenu)->setPaged(9, PageOrientation::HORIZONTAL, 422);
 
 		return true;
 	}
