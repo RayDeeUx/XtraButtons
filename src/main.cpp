@@ -1,5 +1,6 @@
 #include <alphalaneous.pages_api/include/PageMenu.h>
 #include <Geode/modify/LevelSearchLayer.hpp>
+#include <Geode/modify/MenuLayer.hpp>
 #include "Utils.hpp"
 
 using namespace geode::prelude;
@@ -7,7 +8,7 @@ using namespace geode::prelude;
 class $modify(MyLevelSearchLayer, LevelSearchLayer) {
 	bool init(int p0) {
 		if (!LevelSearchLayer::init(p0)) return false;
-		if (!Utils::modEnabled() || p0) return true;
+		if (!Utils::modEnabled() || !Utils::getBool("hallOfFame") || p0) return true;
 
 		const auto &quickSearchMenu = getChildByIDRecursive("quick-search-menu");
 		if (!quickSearchMenu) return true;
@@ -45,5 +46,22 @@ class $modify(MyLevelSearchLayer, LevelSearchLayer) {
 		const auto &scene = CCScene::create();
 		scene->addChild(LevelBrowserLayer::create(GJSearchObject::create(SearchType::HallOfFame)));
 		CCDirector::get()->pushScene(CCTransitionFade::create(.5f, scene));
+	}
+};
+
+class $modify(MyMenuLayer, MenuLayer) {
+	bool init() {
+		if (!MenuLayer::init()) return false;
+
+		if (!Utils::modEnabled() || !Utils::getBool("moreGames")) return true;
+
+		CCLabelBMFont* moreGamesLabel = CCLabelBMFont::create("More\nGames", "goldFont.fnt");
+		moreGamesLabel->setAlignment(kCCTextAlignmentCenter);
+		CircleButtonSprite* moreGamesSprite = CircleButtonSprite::create(moreGamesLabel, CircleBaseColor::Green, CircleBaseSize::MediumAlt);
+		CCMenuItemSpriteExtra* moreGamesButton = CCMenuItemSpriteExtra::create(moreGamesSprite, this, menu_selector(MenuLayer::onMoreGames));
+		moreGamesButton->setID("more-games-button"_spr);
+		this->getChildByID("bottom-menu")->addChild(moreGamesButton);
+
+		return true;
 	}
 };

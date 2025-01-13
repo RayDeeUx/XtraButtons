@@ -6,10 +6,10 @@
 		"android": "2.2074"
 	},
 	"id": "raydeeux.xeroxedhalloffame",
-	"name": "XtraHallOfFame",
-	"version": "v1.0.1",
+	"name": "XtraButtons",
+	"version": "v1.0.2",
 	"developer": "RayDeeUx",
-	"description": "An \"xtra\" Hall of Fame button in the Quick Search menu.",
+	"description": "\"Xtra\" Hall of Fame and More Games buttons.",
 	"repository": "https://github.com/RayDeeUx/XtraHallOfFame",
 	"dependencies": [
 		{
@@ -36,12 +36,22 @@
 			"description": "Toggles the mod.",
 			"type": "bool",
 			"default": true
+		},
+		"hallOfFame": {
+			"name": "Hall of Fame (Quick Search)",
+			"type": "bool",
+			"default": true
+		},
+		"moreGames": {
+			"name": "More Games (MenuLayer)",
+			"type": "bool",
+			"default": true
 		}
 	},
 	"resources": {
 		"spritesheets": {
-			"RequiringSpritesheetsForASinglePNGSpriteFileIsUnfathomablyCringeIfYouAskMe": [
-				"resources/hallOfFame.png"
+			"OneSpritesheet": [
+				"resources/*.png"
 			]
 		}
 	},
