@@ -10,7 +10,7 @@
 	"version": "v1.0.2",
 	"developer": "RayDeeUx",
 	"description": "\"Xtra\" Hall of Fame and More Games buttons.",
-	"repository": "https://github.com/RayDeeUx/XtraHallOfFame",
+	"repository": "https://github.com/RayDeeUx/XtraButtons",
 	"dependencies": [
 		{
 			"id": "geode.node-ids",
