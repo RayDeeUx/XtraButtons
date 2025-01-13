@@ -60,7 +60,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 		CircleButtonSprite* moreGamesSprite = CircleButtonSprite::create(moreGamesLabel, CircleBaseColor::Green, CircleBaseSize::MediumAlt);
 		CCMenuItemSpriteExtra* moreGamesButton = CCMenuItemSpriteExtra::create(moreGamesSprite, this, menu_selector(MenuLayer::onMoreGames));
 		moreGamesButton->setID("more-games-button"_spr);
-		this->getChildByID("bottom-menu")->addChild(moreGamesButton);
+		if (const auto bottomMenu = this->getChildByID("bottom-menu")) bottomMenu->addChild(moreGamesButton);
 
 		return true;
 	}
