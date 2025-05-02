@@ -1,4 +1,6 @@
 # XtraButtons Changelog
+## v1.0.3
+- Experimental iOS support.
 ## v1.0.2
 - Rename mod to `XtraButtons`.
 - Added `More Games` button to bottom menu of MenuLayer since everyone who used Overcharged Main Menu kept complaining about it being missing.
