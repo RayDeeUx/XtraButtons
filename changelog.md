@@ -1,4 +1,7 @@
 # XtraButtons Changelog
+## v1.0.4
+- Remove unused files.
+- Fix blatant oversight.
 ## v1.0.3
 - Experimental iOS support.
 ## v1.0.2
