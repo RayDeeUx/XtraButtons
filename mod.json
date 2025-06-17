@@ -1,29 +1,21 @@
 {
-	"geode": "4.3.1",
+	"geode": "4.4.0",
 	"gd": {
 		"win": "2.2074",
 		"mac": "2.2074",
-		"android": "2.2074",
-		"ios": "2.2074"
+		"ios": "2.2074",
+		"android": "2.2074"
 	},
 	"id": "raydeeux.xeroxedhalloffame",
 	"name": "XtraButtons",
-	"version": "v1.0.3",
+	"version": "v1.0.4",
 	"developer": "RayDeeUx",
 	"description": "\"Xtra\" Hall of Fame and More Games buttons.",
 	"repository": "https://github.com/RayDeeUx/XtraButtons",
-	"dependencies": [
-		{
-			"id": "geode.node-ids",
-			"version": ">=v1.17.0",
-			"importance": "required"
-		},
-		{
-			"id": "alphalaneous.pages_api",
-			"version": ">=v1.4.1",
-			"importance": "required"
-		}
-	],
+	"dependencies": {
+		"geode.node-ids": ">=v1.17.0"
+		"alphalaneous.pages_api": ">=v1.4.1"
+	},
 	"incompatibilities": [
 		{
 			"id": "raydeeux.gamerboyislazy",
