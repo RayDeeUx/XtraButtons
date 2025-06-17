@@ -12,8 +12,6 @@ project(GamerBoyIsLazy VERSION 1.0.0)
 
 # Set up the mod binary
 add_library(${PROJECT_NAME} SHARED
-    src/Manager.cpp
-    src/Manager.hpp
     src/Utils.cpp
     src/Utils.hpp
 
